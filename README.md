@@ -37,6 +37,17 @@ $host.Version
 $PSVersionTable.PSVersion
 ```
 
+### User information
+##### Get list of all AD Users
+```Powershell
+Get-ADUser -filter * | Select -Property SamAccountName
+```
+
+##### Get list of groups for every AD user
+```Powershell
+foreach ($user in (Get-ADUser -Filter * | Select -ExpandProperty SamAccountName)) { Write-Host $user "{"((Get-ADPrincipalGroupMembership $user | Select -Expand Name) -join ', ' ) "}`n" }
+```
+
 ### Password / Hidden data
 
 This will be a place for finding passwords or hidden data.
