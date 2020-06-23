@@ -22,7 +22,7 @@ This will be a place for enumeration commands.
 #### Checking powershell version different methods:
 ##### Registry
 ```Powershell
-(Get-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\PowerShell\3\PowerShellEngine -Name 'PowerShellVersion').PowerShellVersio
+(Get-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\PowerShell\3\PowerShellEngine -Name 'PowerShellVersion').PowerShellVersion
 ```
 ##### $host Variable
 ```Powershell
